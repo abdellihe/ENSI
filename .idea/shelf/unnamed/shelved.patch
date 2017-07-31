@@ -1,0 +1,598 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision )
++++ .idea/vcs.xml	(revision )
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="$PROJECT_DIR$/myownprojects" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/DashboardBundle/Entity/userApp.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/DashboardBundle/Entity/userApp.php	(revision )
++++ src/DashboardBundle/Entity/userApp.php	(revision )
+@@ -0,0 +1,574 @@
++<?php
++
++namespace DashboardBundle\Entity;
++
++use Doctrine\ORM\Mapping as ORM;
++use Symfony\Component\Security\Core\User\UserInterface;
++
++
++
++
++
++class userApp implements UserInterface, \Serializable {
++
++    public function _construct() {
++        $this->estPresident = false;
++    }
++
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="id", type="integer")
++     * @ORM\Id
++     * @ORM\GeneratedValue(strategy="AUTO")
++     */
++    private $id;
++
++    /**
++     * @ORM\ManyToMany(targetEntity="UserBundle\Entity\CyRole", cascade={"persist"})
++     */
++    private $roles;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
++     */
++    protected  $nom;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="prenom", type="string", length=255, nullable=true)
++     */
++    protected $prenom;
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="est_desactive", type="integer", length=255, nullable=true)
++     */
++    protected $estdesactive;
++
++    /**
++     * @return int
++     */
++    public function getEstdesactive()
++    {
++        return $this->estdesactive;
++    }
++
++    /**
++     * @param int $estdesactive
++     */
++    public function setEstdesactive($estdesactive)
++    {
++        $this->estdesactive = $estdesactive;
++    }
++
++    /**
++     * @return int
++     */
++    public function getIsdeleted()
++    {
++        return $this->isdeleted;
++    }
++
++    /**
++     * @param int $isdeleted
++     */
++    public function setIsdeleted($isdeleted)
++    {
++        $this->isdeleted = $isdeleted;
++    }
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="is_deleted", type="integer", length=255, nullable=true)
++     */
++    protected $isdeleted;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="ip_address", type="string", length=255, nullable=true)
++     */
++    protected $ipadresse;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="cin", type="string", length=255, nullable=true)
++     */
++    protected $cin;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="ville", type="string", length=255, nullable=true)
++     */
++    protected $ville;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="username", type="string", length=255, nullable=true)
++     */
++    protected $username;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="password", type="string", length=255, nullable=true)
++     */
++    protected $password;
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="email", type="string", length=255, nullable=true)
++     */
++    protected $email;
++
++    /**
++     * @return int
++     */
++    public function getId()
++    {
++        return $this->id;
++    }
++
++    /**
++     * @param int $id
++     */
++    public function setId($id)
++    {
++        $this->id = $id;
++    }
++
++    /**
++     * @return mixed
++     */
++    public function getRoles()
++    {
++        return $this->roles;
++    }
++
++    /**
++     * @param mixed $roles
++     */
++    public function setRoles($roles)
++    {
++        $this->roles = $roles;
++    }
++
++    /**
++     * @return string
++     */
++    public function getNom()
++    {
++        return $this->nom;
++    }
++
++    /**
++     * @param string $nom
++     */
++    public function setNom($nom)
++    {
++        $this->nom = $nom;
++    }
++
++    /**
++     * @return string
++     */
++    public function getPrenom()
++    {
++        return $this->prenom;
++    }
++
++    /**
++     * @param string $prenom
++     */
++    public function setPrenom($prenom)
++    {
++        $this->prenom = $prenom;
++    }
++
++    /**
++     * @return string
++     */
++    public function getIpadresse()
++    {
++        return $this->ipadresse;
++    }
++
++    /**
++     * @param string $ipadresse
++     */
++    public function setIpadresse($ipadresse)
++    {
++        $this->ipadresse = $ipadresse;
++    }
++
++    /**
++     * @return string
++     */
++    public function getCin()
++    {
++        return $this->cin;
++    }
++
++    /**
++     * @param string $cin
++     */
++    public function setCin($cin)
++    {
++        $this->cin = $cin;
++    }
++
++    /**
++     * @return string
++     */
++    public function getVille()
++    {
++        return $this->ville;
++    }
++
++    /**
++     * @param string $ville
++     */
++    public function setVille($ville)
++    {
++        $this->ville = $ville;
++    }
++
++    /**
++     * @return string
++     */
++    public function getUsername()
++    {
++        return $this->username;
++    }
++
++    /**
++     * @param string $username
++     */
++    public function setUsername($username)
++    {
++        $this->username = $username;
++    }
++
++    /**
++     * @return string
++     */
++    public function getPassword()
++    {
++        return $this->password;
++    }
++
++    /**
++     * @param string $password
++     */
++    public function setPassword($password)
++    {
++        $this->password = $password;
++    }
++
++    /**
++     * @return string
++     */
++    public function getEmail()
++    {
++        return $this->email;
++    }
++
++    /**
++     * @param string $email
++     */
++    public function setEmail($email)
++    {
++        $this->email = $email;
++    }
++
++    /**
++     * @return string
++     */
++    public function getSalt()
++    {
++        return $this->salt;
++    }
++
++    /**
++     * @param string $salt
++     */
++    public function setSalt($salt)
++    {
++        $this->salt = $salt;
++    }
++
++    /**
++     * @return int
++     */
++    public function getSexe()
++    {
++        return $this->sexe;
++    }
++
++    /**
++     * @param int $sexe
++     */
++    public function setSexe($sexe)
++    {
++        $this->sexe = $sexe;
++    }
++
++    /**
++     * @return \DateTime
++     */
++    public function getDatenaissance()
++    {
++        return $this->datenaissance;
++    }
++
++    /**
++     * @param \DateTime $datenaissance
++     */
++    public function setDatenaissance($datenaissance)
++    {
++        $this->datenaissance = $datenaissance;
++    }
++
++    /**
++     * @return int
++     */
++    public function getNiveau()
++    {
++        return $this->niveau;
++    }
++
++    /**
++     * @param int $niveau
++     */
++    public function setNiveau($niveau)
++    {
++        $this->niveau = $niveau;
++    }
++
++    /**
++     * @return int
++     */
++    public function getClasse()
++    {
++        return $this->classe;
++    }
++
++    /**
++     * @param int $classe
++     */
++    public function setClasse($classe)
++    {
++        $this->classe = $classe;
++    }
++
++    /**
++     * @return int
++     */
++    public function getConcours()
++    {
++        return $this->concours;
++    }
++
++    /**
++     * @param int $concours
++     */
++    public function setConcours($concours)
++    {
++        $this->concours = $concours;
++    }
++
++    /**
++     * @return int
++     */
++    public function getPrepa()
++    {
++        return $this->prepa;
++    }
++
++    /**
++     * @param int $prepa
++     */
++    public function setPrepa($prepa)
++    {
++        $this->prepa = $prepa;
++    }
++
++    /**
++     * @return int
++     */
++    public function getRang()
++    {
++        return $this->rang;
++    }
++
++    /**
++     * @param int $rang
++     */
++    public function setRang($rang)
++    {
++        $this->rang = $rang;
++    }
++
++    /**
++     * @return int
++     */
++    public function getParmi()
++    {
++        return $this->parmi;
++    }
++
++    /**
++     * @param int $parmi
++     */
++    public function setParmi($parmi)
++    {
++        $this->parmi = $parmi;
++    }
++
++    /**
++     * @return int
++     */
++    public function getOption()
++    {
++        return $this->option;
++    }
++
++    /**
++     * @param int $option
++     */
++    public function setOption($option)
++    {
++        $this->option = $option;
++    }
++
++    /**
++     * @return string
++     */
++    public function getInscription()
++    {
++        return $this->inscription;
++    }
++
++    /**
++     * @param string $inscription
++     */
++    public function setInscription($inscription)
++    {
++        $this->inscription = $inscription;
++    }
++
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="salt", type="string", length=255, nullable=true, unique=true)
++     */
++    protected $salt;
++
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="sexe", type="smallint", nullable=true)
++     */
++    private $sexe;
++
++    /**
++     * @var \DateTime
++     *
++     * @ORM\Column(name="date_naissance", type="date",nullable=true, nullable=true)
++     */
++    private $datenaissance;
++
++
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="niveau", type="smallint", nullable=true)
++     */
++    private $niveau;
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="classe", type="smallint", nullable=true)
++     */
++    private $classe;
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="concours_prepa", type="smallint", nullable=true)
++     */
++    private $concours;
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="preparatoire", type="smallint", nullable=true)
++     */
++    private $prepa;
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="rang", type="smallint", nullable=true)
++     */
++    private $rang;
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="parmi", type="smallint", nullable=true)
++     */
++    private $parmi;
++
++    /**
++     * @var int
++     *
++     * @ORM\Column(name="option", type="smallint", nullable=true)
++     */
++    private $option;
++    /**
++     * @var string
++     *
++     * @ORM\Column(name="num_inscription", type="string", nullable=true)
++     */
++    private $inscription;
++
++
++
++    public function eraseCredentials()
++    {
++
++    }
++
++    public function serialize()
++    {
++        return serialize(array(
++            $this->_id,
++            $this->username,
++            $this->password,
++        ));
++    }
++
++    public function unserialize($serialized)
++    {
++        list (
++            $this->_id,
++            $this->username,
++            $this->password,
++            ) = unserialize($serialized);
++    }
++
++
++}

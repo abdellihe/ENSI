@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<!-- Mirrored from moltran.coderthemes.com/blue/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jul 2017 13:27:46 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>Se connecter pour continuer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+    <link href="{{asset('assets/dashboard/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/core.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/icons.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/components.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/pages.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/menu.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/responsive.css') }}" rel="stylesheet" type="text/css">
+
+    <!--bootstrap datepicker -->
+    <link href="{{asset('assets/dashboard/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/plugins/timepicker/bootstrap-timepicker.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/plugins/jquery-multi-select/multi-select.css') }}" rel="stylesheet" type="text/css">
+  
+    <!--select 2-->
+     <link href="{{asset('assets/dashboard/plugins/jquery-multi-select/multi-select.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/plugins/select2/dist/css/select2.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/plugins/select2/dist/css/select2-bootstrap.css') }}" rel="stylesheet" type="text/css">
+   
+    
+    <script src="{{ asset('assets/dashboard/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/notifyjs/dist/notify.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/notifications/notifications.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/notifications/notify-metro.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{asset('assets/dashboard/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{asset('assets/dashboard/plugins/timepicker/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/detect.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/fastclick.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.blockUI.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/waves.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/modernizr.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.app.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/jquery-validation/dist/jquery.validate.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/pages/form-validation-init.js') }}"></script>
+    
+    
+    <script src="{{ asset('assets/dashboard/plugins/select2/dist/js/select2.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/jquery-multi-select/jquery.quicksearch.js') }}"></script>
+    
+
+    
+
+</head>
+<body background="{{ asset('assets/siteWeb/img/loginbackground.jpg')}}" style="font-family: 'Noto Sans', sans-serif;margin: 0;width: 100%;height: 100%; background-size: 1450px;">
+<div class="wrapper-page" id="login" style="" >
+    <div class="panel panel-color panel-primary panel-pages" style="opacity: 0.85;">
+
+        <div class="panel-heading bg-img">
+            <div class="bg-overlay"></div>
+            <center>
+            <img class="custom-logo" widh="100" height="90" src="{{asset('assets/siteWeb/img/logos/ensi-logo.png')}}"  > </img>
+            </center>
+                <!--<h3 class="text-center m-t-10 text-white"> ENSI </h3>-->
+        </div>
+
+
+        <div class="panel-body" >
+            <form id="formlogin"class="form-horizontal m-t-20" action="">
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <input class="form-control input-lg" type="text"  placeholder="votre Email(ensi-uma.tn) ou nom d'utilisateur">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <input class="form-control input-lg" type="password"  placeholder="Votre mot de passe">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox-signup" type="checkbox">
+                            <label for="checkbox-signup">
+                               Se souvenir de moi ?
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group text-center m-t-40">
+                    <div class="col-xs-6">
+                        <a href="{{ path('homepage') }}" class="btn btn-primary btn-lg w-lg waves-effect waves-light btn-danger" type="submit">Annuler</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-primary btn-lg w-lg waves-effect waves-light"  type="submit">Se Connecter</button>
+                    </div>
+                </div>
+
+                <div class="form-group m-t-30">
+                    <div class="col-sm-7">
+                        <a href="pages-recoverpw.html"><i class="fa fa-lock m-r-5"></i> Mot de passe oublié?</a>
+                    </div>
+                    <div class="col-sm-5 text-right" >
+                        <a href="#" id="inscri" data-toggle="modal" data-target="#con-close-modal" >Vous n'avez pas de compte?</a>
+                    </div>
+                </div>
+             {#  {% endif %} #}
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+<!--modal for inscription-->
+
+<div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title"><strong>S'inscrire pour l'année universitaire {{ anneuniversitaire }}</strong></h4>
+            </div>
+
+            <form action="{{path('save_inscri') }}" id="forminscri" method="post">
+            <div class="modal-body">
+                <div class="alert alert-warning alert-dismissible fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong>Notice:</strong>      Prière de saisir des informations exactes.
+                </div>
+                <div class="alert alert-warning alert-dismissible fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong>Notice:</strong>   Réinscrire dans le cas où l'inscription est réfusé.
+                </div>
+
+                <div class="alert alert-danger alert-dismissible fade in">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <strong>Attention ! </strong> Aucune inscription n'est accepté que si les informations saisies sont valides,merci de
+                    bien vérifier avant de s'inscrire.
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label">Nom</label>
+                            <input type="text" required name="inscri[nom]"  class="form-control" id="nom"  aria-required="true" placeholder="nom">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-2" class="control-label">Prénom</label>
+                            <input type="text"  required name="inscri[prenom]" class="form-control" id="prenom" placeholder="prénom">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="field-3" class="control-label">Date de Naissance</label>
+                      <div class="input-group">
+
+                    <input type="text" required name="inscri[dateNaissance]"  class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-2" class="control-label">Sexe</label>
+                                <div class="radio radio-danger">
+                                    <input   type="radio"  name="inscri[sexe]" id="radio3" value="1">
+                                    <label for="radio3">
+                                        Homme
+                                    </label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input  type="radio"   name="inscri[sexe]" id="radio3" value="2">
+                                    <label for="radio3">
+                                        Femme
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+
+                <br/>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-3" class="control-label">Adresse mail</label>
+                            <input type="email" readonly  name="inscri[email]"  class="form-control" id="email" placeholder="prénom.nom@ensi-uma.tn">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Nom d'utilisateur</label>
+                            <input type="text" required name="inscri[username]"  class="form-control" id="field-4" placeholder="nom d'utilisateur">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-6" class="control-label">Ville</label>
+                            <input type="text" required name="inscri[ville]" class="form-control " id="field-6" placeholder="Gouvernorat-délégation">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-3" class="control-label">Adresse </label>
+                            <textarea   placeholder="votre adresse"  name="inscri[adresse]" class="form-control" value="" > </textarea>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-5" class="control-label">N°CIN</label>
+                            <input type="number" required name="inscri[cin]" number="true"  class="form-control" id="field-5" placeholder="N°CIN">
+                        </div>
+                    </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-4" class="control-label">N°Inscription</label>
+                                <input type="number" number="true" required name="inscri[numInscription]" class="form-control" placeholder="N°Inscription">
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-5" class="control-label">N°Tél Mobile</label>
+                            <input type="number" number="true" name="inscri[telMobile]"  maxlength="8" class="form-control" id="field-5" placeholder="N°Tél Mobile">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">N°tél fixe</label>
+                            <input type="number"  name="inscri[numTelFixe]" class="form-control" placeholder="N°tél fixe">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Mot de passe</label>
+                            <input type="password" required id="password" name="password"  class="form-control"  placeholder="Choisissiez votre mot de passe">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Confirmer Mot de passe</label>
+                            <input type="password"  required class="form-control" name="password_again" id="password_again" placeholder="Confirmer Mot de passe">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="field-4"  class="control-label">Niveau</label>
+                            <select  required aria-required="true" name="inscri[niveau]" id="niveau" class="select2 form-control">
+                                <option value="0"> séléctionnez </option>
+                                <option value="II1"> II1 </option>
+                                <option value="II2"> II2 </option>
+                                <option value="II3"> II3 </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id="classe" style="display:none">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Classe</label>
+                            <select name="inscri[idclasse]" id="classes" class="select2 form-control">
+                             <option value="0">Séléctionnez</option>
+                            </select>
+                            </div>
+                        </div>
+
+                    <div class="col-md-4" id="moyii1" style="display:none">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Moyenne Générale II1</label>
+                            <input type="number" class="form-control " name="inscri[moyii1]" id="field-6" placeholder="Moyenne générale ii1">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id="rangii1" style="display:none">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">rang II1</label>
+                            <input type="number" class="form-control" name="inscri[rangii1]"  id="field-6" placeholder="rang II1">
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="parmiii1" style="display:none">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">parmi</label>
+                            <input type="number"  name="inscri[parmiii1]" class="form-control " id="field-6" placeholder="parmi">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id="option" style="display:none">
+                        <div class="form-group">
+                            <label for="field-5" class="control-label">Option</label>
+                            <select name="inscri[option]" class="select2 form-control">
+                                <option value="0"> séléctionnez </option>
+                                <option value="II3-ILSI"> II3-ILSI </option>
+                                <option value="II3-SLE"> II3-SLE </option>
+                                <option value="II3-RSR"> II3-RSR </option>
+                                <option value="II3-ISID"> II3-ISID </option>
+                                <option value="II3-IF"> II3-IF </option>
+                                <option value="II3-II"> II3-II </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id="moyii2" style="display:none">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Moyenne Générale II2</label>
+                            <input type="number" name="inscri[moyii2]" class="form-control " id="field-6" placeholder="Moyenne générale ii2">
+                        </div>
+                    </div>
+
+                        <div class="col-md-4" id="concours" style="display:none">
+                            <div class="form-group">
+                                <label for="field-4" class="control-label">Concours-prépa</label>
+                                <select name="inscri[concours]" id="niveau_prepa" class="select2 form-control">
+                                    <option value="0"> séléctionnez </option>
+                                    <option value="MP"> MP </option>
+                                    <option value="PC"> PC </option>
+                                    <option value="PT"> PT </option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                </div>
+                <div class="row" id="rang" style="display:none">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="field-4" class="control-label">Préparatoire</label>
+                            <select name="inscri[prepa]" id="perparatoire" class="select2 form-control">
+                                <option value="0"> séléctionnez </option>
+                                <option value="IPEIT"> IPEIT </option>
+                                <option value="IPEIM"> IPEIM </option>
+                                <option value="IPEIS"> IPEIS </option>
+                                <option value="IPEIN"> IPEIN </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="field-2" class="control-label">Rang</label>
+                            <input type="number" name="inscri[rangPrepa]" class="form-control " id="field-6" placeholder="rang">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-6" class="control-label">Parmi</label>
+                            <input type="number" name="inscri[parmiPrepa]" class="form-control " id="field-6" placeholder="nombre total des condidats">
+                        </div>
+                    </div>
+
+                    </div>
+
+                <div class="row" id="redoublant" style="display:none">
+                    <div class="col-md-6">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="checkbox2" name="inscri[redoublant]" type="checkbox"  value="1">
+                                    <label for="checkbox2">
+                                        êtes-vous Redoublant ?
+                                    </label>
+                                </div>
+                            </div>
+
+                </div>
+
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-info waves-effect waves-light">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><!-- /.modal -->
+
+
+<script>
+    var resizefunc = [];
+    $(document).ready(function() {
+  $('#niveau').on('change',function(){
+      $.ajax({
+          type: 'POST',
+          url: "{{ path("get_json_classes_by_level")}}",
+          data: {"data": $('#niveau').val()},
+          async: false,
+          success: function (data)
+          {
+              $('#classes').html("");
+              $('#classes').append("<option  value=''>Séléctionnez</option>");
+              for (i = 0; i < data.length; i++) {
+                  $('#classes').append("<option  value='" + data[i].id + "'>" + data[i].nom + "</option>");
+                   }
+          }
+      });
+  });
+         $('#formlogin').validate();
+        $('#forminscri').validate({
+            rules: {
+                password: {
+                    minlength: 8
+                },
+                password_again: {
+                    minlength: 8,
+                    equalTo: "#password"
+                }
+            }
+        });
+
+     if($('#forminscri').validate())
+     {
+         $(this).submit();
+     }
+        $('#nom,#prenom').on('change',function(){
+            var nom=$('#nom').val();
+            var prenom=$('#prenom').val();
+            $('#email').val(prenom+'.'+nom+'@ensi-uma.tn');
+
+        });
+  $('#inscri').click(function(){
+ $('#niveau').on('change',function(){
+
+ var val=$(this).val();
+
+
+
+ if (val=='II3')
+ {
+
+     $('#option').css('display','block');
+     $('#classe').css('display','block');
+     $('#concours').css('display','none');
+     $('#rang').css('display','none');
+     $('#moyii2').css('display','block');
+     $('#rangii1').css('display','none');
+     $('#parmiii1').css('display','none');
+     $('#redoublant').css('display','block');
+
+ }
+ else if(val=='II1')
+ {
+
+     $('#classe').css('display','block');
+     $('#option').css('display','none');
+     $('#concours').css('display','block');
+     $('#moyii1').css('display','none');
+     $('#moyii2').css('display','none');
+     $('#rangii1').css('display','none');
+     $('#parmiii1').css('display','none');
+     $('#redoublant').css('display','block');
+
+
+
+ }
+ else if(val=='II2')
+ {
+
+     $('#classe').css('display','block');
+     $('#concours').css('display','none');
+      $('#rang').css('display','none');
+     $('#option').css('display','none');
+     $('#moyii1').css('display','block');
+     $('#moyii2').css('display','none');
+     $('#rangii1').css('display','block');
+     $('#parmiii1').css('display','block');
+     $('#redoublant').css('display','block');
+
+
+ }
+ else {
+
+     $('#classe').css('display','none');
+     $('#concours').css('display','none');
+     $('#rang').css('display','none');
+     $('#option').css('display','none');
+     $('#moyii1').css('display','none');
+     $('#moyii2').css('display','none');
+     $('#rangii1').css('display','none');
+     $('#parmiii1').css('display','none');
+     $('#redoublant').css('display','none');
+
+ }
+$('#concours').on('change',function(){
+
+ $('#rang').css('display','block');
+
+
+});
+
+ });
+
+  });
+
+
+
+    });
+
+
+
+
+</script>
+<script>
+    $(document).ready(function() {
+        
+        $(".select2").select2({
+                width: '100%'
+            });
+
+     var s={{ success }}
+
+   if(s==1) {
+       $.Notification.notify('success', 'top right', 'Vous êtes bien inscrit',
+           "Vous êtes en attente de validation par l'administrateur");
+   }
+   else if(s==0)
+   {
+       $.Notification.notify('warning', 'top right', 'Echec',
+           "Merci de réinscrire");
+
+   }
+        // Time Picker
+        $('#timepicker').timepicker({defaultTIme: false});
+        $('#timepicker2').timepicker({showMeridian: false});
+        $('#timepicker3').timepicker({minuteStep: 15});
+
+        // Date Picker
+        $('#datepicker').datepicker();
+        $('#datepicker-inline').datepicker();
+        $('#datepicker-multiple').datepicker({
+            numberOfMonths: 3,
+            showButtonPanel: true
+        });
+        //colorpicker start
+
+        $('.colorpicker-default').colorpicker({
+            format: 'hex'
+        });
+        $('.colorpicker-rgba').colorpicker();
+
+
+        //multiselect start
+
+        $('#my_multi_select1').multiSelect();
+        $('#my_multi_select2').multiSelect({
+            selectableOptgroup: true
+        });
+
+        $('#my_multi_select3').multiSelect({
+            selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+            selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+            afterInit: function (ms) {
+                var that = this,
+                        $selectableSearch = that.$selectableUl.prev(),
+                        $selectionSearch = that.$selectionUl.prev(),
+                        selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                        selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                        .on('keydown', function (e) {
+                            if (e.which === 40) {
+                                that.$selectableUl.focus();
+                                return false;
+                            }
+                        });
+
+                that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                        .on('keydown', function (e) {
+                            if (e.which == 40) {
+                                that.$selectionUl.focus();
+                                return false;
+                            }
+                        });
+            },
+            afterSelect: function () {
+                this.qs1.cache();
+                this.qs2.cache();
+            },
+            afterDeselect: function () {
+                this.qs1.cache();
+                this.qs2.cache();
+            }
+        });
+
+
+
+        // Select2
+        jQuery(".select2").select2({
+            width: '100%'
+        });
+
+        //Bootstrap-TouchSpin
+        $(".vertical-spin").TouchSpin({
+            verticalbuttons: true,
+            verticalupclass: 'ion-plus-round',
+            verticaldownclass: 'ion-minus-round'
+        });
+        var vspinTrue = $(".vertical-spin").TouchSpin({
+            verticalbuttons: true
+        });
+        if (vspinTrue) {
+            $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+        }
+
+        $("input[name='demo1']").TouchSpin({
+            min: 0,
+            max: 100,
+            step: 0.1,
+            decimals: 2,
+            boostat: 5,
+            maxboostedstep: 10,
+            postfix: '%'
+        });
+        $("input[name='demo2']").TouchSpin({
+            min: -1000000000,
+            max: 1000000000,
+            stepinterval: 50,
+            maxboostedstep: 10000000,
+            prefix: '$'
+        });
+        $("input[name='demo3']").TouchSpin();
+        $("input[name='demo3_21']").TouchSpin({
+            initval: 40
+        });
+        $("input[name='demo3_22']").TouchSpin({
+            initval: 40
+        });
+
+        $("input[name='demo0']").TouchSpin({});
+    });
+</script>
+
+    
+
+<!-- Main  -->
+
+
+
+</body>
+
+<!-- Mirrored from moltran.coderthemes.com/blue/pages-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Jul 2017 13:27:46 GMT -->
+</html>

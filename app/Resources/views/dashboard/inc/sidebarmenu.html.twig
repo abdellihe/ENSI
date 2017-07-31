@@ -1,0 +1,230 @@
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div class="user-details" >
+            <div class="pull-left">
+                <img src="{{ asset('assets/dashboard/images/users/user.png') }}" alt="" class="thumb-md img-circle">
+            </div>
+            <div class="user-info">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">admin admin <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Mon Profile<div class="ripple-wrapper"></div></a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Paramètres</a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-lock"></i> Vérrouiller</a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Se déconnecter</a></li>
+                    </ul>
+                </div>
+
+                <p class="text-muted m-0">Administrateur</p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="index.html" class="waves-effect"><i class="md md-home"></i><span> Tableau de bord </span></a>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md md-palette"></i> <span> Contenu web </span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ path('slider_ensi') }}">Slider</a></li>
+                        <li><a href="{{ path('actualites_ensi') }}">news</a></li>
+                        <li><a href="ui-panels.html">publications</a></li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="#" class="waves-effect"><i class="md-settings"></i><span> Paramétrages </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{path('users_ensi')}}">Utilisateurs</a></li>
+                        <li><a href="{{ path('all_enseignants') }}">Enseignants</a></li>
+                        <li><a href="mail-compose.html">Elèves Ingénieurs</a></li>
+                        <li><a href="{{path('classes_ensi')  }}">Classes</a></li>
+                        <li><a href="{{ path('inscri_ensi') }}">Tous les incriptions</a></li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>Modules</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>II1</span></a></li>
+                                <li><a href="javascript:void(0);"><span>II2</span></a></li>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect"><span>II3</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                                    <ul style="">
+                                        <li><a href="javascript:void(0);"><span>Filière ILSI</span></a></li>
+                                        <li><a href="javascript:void(0);"><span>Filière SLE</span></a></li>
+                                        <li><a href="javascript:void(0);"><span>Filière RSR</span></a></li>
+                                        <li><a href="javascript:void(0);"><span>Filière ISID</span></a></li>
+                                        <li><a href="javascript:void(0);"><span>Filière IF</span></a></li>
+                                        <li><a href="javascript:void(0);"><span>Filière II</span></a></li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="" class="waves-effect"><i class=" md-account-child"></i><span>Les inscriptions</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);"><span>II1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>II2</span></a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>II3</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>Filière ILSI</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière SLE</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière RSR</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière ISID</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière IF</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière II</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class=" fa fa-graduation-cap"></i><span>Elèves Ingénieurs </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);"><span>II1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>II2</span></a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>II3</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>Filière ILSI</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière SLE</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière RSR</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière ISID</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière IF</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière II</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class=" md-insert-drive-file"></i><span>Fiches de note </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);"><span>II1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>II2</span></a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>II3</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>Filière ILSI</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière SLE</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière RSR</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière ISID</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière IF</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière II</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="md md-event"></i><span>Calendriers </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);"><span>II1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>II2</span></a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>II3</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>Filière ILSI</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière SLE</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière RSR</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière ISID</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière IF</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière II</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="md md-event"></i><span>Conventions </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);"><span>Stage d'été II1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>stage d'été II2</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>Stage PFE</span> </span></a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class=" md-content-paste"></i><span> Mon registre d'appel </span></a>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="md-event-busy"></i><span>Eliminations </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);"><span>II1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><span>II2</span></a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><span>II3</span> <span class="pull-right"><i class="md md-add"></i></span></a>
+                            <ul style="">
+                                <li><a href="javascript:void(0);"><span>Filière ILSI</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière SLE</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière RSR</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière ISID</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière IF</span></a></li>
+                                <li><a href="javascript:void(0);"><span>Filière II</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class=" md-thumbs-up-down"></i><span>Demandes </span></a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class="md md-event"></i><span>Mes Calendriers </span></a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class=" md-insert-drive-file"></i><span>Mes notes </span></a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class=" md-insert-drive-file"></i><span>Ma relevé de notes </span></a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class=" md-view-week"></i><span>Mes abscences </span></a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class="md-recent-actors"></i><span>Mes éliminations </span></a>
+                </li>
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class=" md-thumbs-up-down"></i><span>Mes Demandes </span></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

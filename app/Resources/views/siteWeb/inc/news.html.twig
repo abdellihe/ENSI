@@ -1,0 +1,221 @@
+<style>
+    #test{
+        animation: Test 1s infinite;
+    }
+    @keyframes Test{
+        0%{opacity: 1;}
+        50%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+</style>
+
+        <div id="sidebar-primary" class="widget-area" role="complementary">
+            <aside id="recent-posts-2" class="widget widget_recent_entries">
+                <h2 class="widget-title">Actualités</h2>
+
+                <ul>
+                    {% for n in new %}
+                        {% if n.niveau=='1'  %}
+                            {% if  n.est_new is not null %}
+                      <li>
+                        <div id="test">
+                        <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                        </div>
+                     </li>
+                            {% else %}
+                                <li>
+     <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                </li>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </aside>
+            <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Niveau II 1</h2>
+                    <ul>
+                        {% for n in new %}
+                            {% if n.niveau=='II1'  %}
+                                {% if  n.est_new is not null %}
+                                    <li>
+                                        <div id="test">
+                                            <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                        </div>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+            </aside>
+            <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Niveau II 2</h2>
+                <ul>
+                    {% for n in new %}
+                        {% if n.niveau=='II2'  %}
+                            {% if  n.est_new is not null %}
+                                <li>
+                                    <div id="test">
+                                        <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                    </div>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </aside>
+            <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Niveau II 3</h2>
+                <ul>
+                    {% for n in new %}
+                        {% if n.niveau=='II3'  %}
+                            {% if  n.est_new is not null %}
+                                <li>
+                                    <div id="test">
+                                        <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                    </div>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    <li>
+                        <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">II3-Filière ILSI</h2>
+                            <ul>
+                                {% for n in new %}
+                                    {% if n.niveau=='II3-ILSI'  %}
+                                        {% if  n.est_new is not null %}
+                                            <li>
+                                                <div id="test">
+                                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                                </div>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                        <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">II3-Filière SLE</h2>
+                            <ul>
+                                {% for n in new %}
+                                    {% if n.niveau=='II3-SLE'  %}
+                                        {% if  n.est_new is not null %}
+                                            <li>
+                                                <div id="test">
+                                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                                </div>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </li>
+                    <li>
+                        <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">II3-Filière RSR</h2>
+                            <ul>
+
+
+                                                {% for n in new %}
+                                                    {% if n.niveau=='II3-RSR'  %}
+                                                        {% if  n.est_new is not null %}
+                                                            <li>
+                                                                <div id="test">
+                                                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                                                </div>
+                                                            </li>
+                                                        {% else %}
+                                                            <li>
+                                                                <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                                            </li>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endfor %}
+
+                            </ul>
+                        </aside>
+                    </li>
+                    <li>
+                        <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">II3-Filière ISID</h2>
+                            <ul>
+                                {% for n in new %}
+                                    {% if n.niveau=='II3-ISID'  %}
+                                        {% if  n.est_new is not null %}
+                                            <li>
+                                                <div id="test">
+                                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                                </div>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </li>
+                    <li>
+                        <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">II3-Filière IF</h2>
+                            <ul>
+                                {% for n in new %}
+                                    {% if n.niveau=='II3-IF'  %}
+                                        {% if  n.est_new is not null %}
+                                            <li>
+                                                <div id="test">
+                                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                                </div>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </li>
+                    <li>
+                        <aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">II3-Filière II</h2>
+                            <ul>
+                                {% for n in new %}
+                                    {% if n.niveau=='II3-II'  %}
+                                        {% if  n.est_new is not null %}
+                                            <li>
+                                                <div id="test">
+                                                    <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}" download>{{ n.title }}<sup style='color:red;'>NEW</sup></a>
+                                                </div>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ asset('assets/uploads/news/' ~ n.path_file ~'')}}"> {{ n.title }}  </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </aside>
+                    </li>
+                </ul>
+            </aside>
+
+        </div>
+

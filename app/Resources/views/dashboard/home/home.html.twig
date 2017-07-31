@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    ENSI
+{% endblock %}
+{% block stylesheets %}
+    <link href="{{asset('assets/dashboard/plugins/sweetalert/dist/sweetalert.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/core.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/icons.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/components.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/pages.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/menu.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/dashboard/css/responsive.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 class="pull-left page-title">hello</h4>
+            <ol class="breadcrumb pull-right">
+                <li><a href="#"></a></li>
+                <li class="active"></li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        var resizefunc = [];
+    </script>
+    <script src="{{ asset('assets/dashboard/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/detect.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/fastclick.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.blockUI.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/waves.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/modernizr.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/jquery.app.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/plugins/moment/moment.js') }}"></script>
+    <script srcc="{{ asset('assets/dashboard/pages/jquery.todo.js') }}"></script>
+{% endblock %}
+
+
+
+
+

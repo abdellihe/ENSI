@@ -1,0 +1,90 @@
+{% include 'dashboard/inc/header.html.twig' %}
+    {% include('dashboard/inc/sidebarmenu.html.twig') %}
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="pull-left page-title">Liste des inscriptions </h4>
+                    <ol class="breadcrumb pull-right">
+                        <li><a href="#">ENSI</a></li>
+                        <li class="active">Les inscriptions</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Start Widget -->
+            <!--Widget-4 -->
+            <!-- votre contenu ici   -->
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">Liste des inscriptions de l' année universitaire {{anneeuniversitaire }}</h3></div>
+                <div class="panel-body">
+
+                    <!-- votre contenu ici   -->
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div> <!-- container -->
+
+</div> <!-- content -->
+
+
+</div>
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+
+<script>
+    var resizefunc = [];
+</script>
+
+<script src="{{ asset('assets/dashboard/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/detect.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/fastclick.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/jquery.slimscroll.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/jquery.blockUI.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/waves.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/wow.min.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/jquery.nicescroll.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/jquery.scrollTo.min.js') }}"></script>
+<script src="{{ asset('assets/dashboard/js/jquery.app.js') }}"></script>
+<script src="{{ asset('assets/dashboard/plugins/moment/moment.js') }}">
+    <script src="{{ asset('assets/dashboard/plugins/waypoints/lib/jquery.waypoints.js') }}"></script>
+<script src="{{ asset('assets/dashboard/plugins/counterup/jquery.counterup.min.js') }}"></script>
+<script src="{{ asset('assets/dashboard/plugins/sweetalert/dist/sweetalert.min.js') }}"></script>
+<script srcc="{{ asset('assets/dashboard/pages/jquery.todo.js') }}"></script>
+<script src="{{ asset('assets/dashboard/plugins/raphael/raphael-min.js') }}"></script>
+<script src="{{ asset('assets/dashboard/plugins/morris.js/morris.min.js') }}"></script>
+
+
+<script type="text/javascript">
+    /* ==============================================
+     Counter Up
+     =============================================== */
+    $(document).ready(function($) {
+        $('.counter').counterUp({
+            delay: 100,
+            time: 1200
+        });
+    });
+</script>
+
+</body>
+
+
+</html>
+
+

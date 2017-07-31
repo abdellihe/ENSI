@@ -1,0 +1,64 @@
+{% include 'siteWeb/inc/header.html.twig' %}
+
+{% include 'siteWeb/inc/menuBar.html.twig' %}
+
+
+<div id="breadcrumb"><div class="container">
+        <div id="crumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+            <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="{{ path('homepage')}}">
+                    Ecole Nationale des Sciences de l'Informatique</a></span> &gt; <span class="current">Présentation de l’ENSI
+            </span></div></div><!-- .container -->
+</div>
+<div id="content" class="site-content"><div class="container"><div class="inner-wrapper">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    <article id="post-10" class="post-10 page type-page status-publish has-post-thumbnail hentry">
+                        <header class="entry-header">
+                            <h1 class="entry-title">Présentation de l’ENSI</h1>	</header><!-- .entry-header -->
+
+                        <div class="entry-content">
+
+                            <img src="{{ asset('assets/siteWeb/img/slider/ENSIview.jpg') }}" class="aligncenter wp-post-image" alt="ENSI 01">		<p>&nbsp;</p>
+                            <p>
+                                Fondée en septembre 1984 par Habib Bourguiba Jr. et le professeur Mohamed Ben Ahmed, elle s'est installée sur l'avenue Mohammed V à Tunis puis à la Charguia II avant d'emménager dans les nouveaux locaux qui se situent sur le campus de La Manouba (près de Tunis) à la rentrée 2000.
+                                C'est en anticipant cet emménagement que l'école intègre en 1999 la nouvelle Université de La Manouba qui vient d'être créée.
+                                L'établissement entre en grève le 5 mars 2014 à la suite du refus de la nomination du professeur Leïla Azouz Saïdane au poste de directeur car,
+                                du point de vue des étudiants, elle serait intervenue dans l'acceptation de la demande de son fils pour intégrer l'ENSI.
+                                Toujours selon eux,
+                                l'étudiant en question ne répondrait pas aux critères de sélection pour intégrer la prestigieuse école1. Le 17 avril,
+                                le ministre Taoufik Jelassi annonce la démission collective du conseil scientifique et la fin de la grève pour le lendemain.
+                                L'école délivre le diplôme national d'ingénieur en informatique au bout de trois ans aux élèves ingénieurs recrutés après une classe préparatoire. La formation inclut 2 700 heures dont des cours intégrés, des travaux pratiques, des projets et des stages. La formation inclut particulièrement les mathématiques appliquées, l'électronique, les systèmes informatiques et d'informations, les réseaux informatiques, l'architecture, la programmation ainsi que les langues, les sciences de gestion et le droit.
+
+                                Les ingénieurs en informatique sont formés d'abord en tronc commun de trois semestres puis avec options pendant deux semestres :
+
+                                Ingénierie pour l'image ;
+                                Ingénierie logicielle et systèmes d'information ;
+                                Ingénierie pour la finance ;
+                                Ingénierie des systèmes intelligents et décision ;
+                                Réseaux et systèmes répartis ;
+                                Systèmes et logiciels embarqués.
+                                Un stage obligatoire de quatre mois fait office de projet de fin d'études d'ingénieur et sanctionne la formation. La formation inclut deux autres stages obligatoires (deux fois six semaines).
+
+                                </p>
+                            <br/>
+                            <img src="{{ asset('assets/siteWeb/img/slider/ext.jpg') }}" width="1000" class="aligncenter wp-post-image" alt="ENSI 01">		<p>&nbsp;</p>
+                            <p>
+                                ENSI(l'école nationale des sciences de l'informatique) est considérée comme étant une grande école d’ingénieures en Tunisie,
+                                elle est classée la première école d'ingénieures spécialité informatique vue sa forte formation et la qualité
+                                de ses étudiants , En termes de nombre, l’ENSI est la première école en tunisie dont les étudiants effectuent
+                                leurs PFE à l’étranger. (environ 40%des etudients de la promotion 2013)
+                            </p>
+                        </div><!-- .entry-content -->
+                        <footer class="entry-footer">
+                        </footer><!-- .entry-footer -->
+                    </article><!-- #post-## -->
+
+
+                </main><!-- #main -->
+            </div><!-- #primary -->
+           {% include 'siteWeb/inc/news.html.twig' %}
+
+
+        </div><!-- .inner-wrapper --></div><!-- .container --></div>
+
+{% include 'siteWeb/inc/footer.html.twig' %}
