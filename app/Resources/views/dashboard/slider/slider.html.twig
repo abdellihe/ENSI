@@ -88,7 +88,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                         
+                 {% for s in slide  %}
+                     <tr> 
+                         <td>{{s.titre}}</td>
+                         <td>{{s.date_create}}  </td>
+                         <td><a href="{{ asset('assets/siteWeb/img/slider/' ~ s.path_img ~'')}}"   download> {{s.path_img}}</a></td>  
+                          <td>
+                                <a href="#"  id="remove_one" data-id="{{s.id}}">
+                                    <button type="button"  data-toggle="modal" data-target=".bs-example-modal-delete-one"  class="btn btn-icon waves-effect waves-light btn-danger m-b-5 btn-action">
+                                        <i class="fa fa-remove"></i> </button>
+                                </a>
+                          </td>
+                     </tr>           
+                     {%endfor%}
                         </tbody>
                     </table>
                 </div>
@@ -146,13 +158,13 @@
                     <h4 class="modal-title"><strong>Ajouter un nouveau slide</strong></h4>
                 </div>
 
-                <form action="{{ path('add_new') }}" id="formnew" method="post"  enctype="multipart/form-data">
+                <form action="{{ path('add_slide') }}" id="formnew" method="post"  enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="field-2" class="control-label">Titre</label>
-                                <input type="text"  id="title" required name="title" class="form-control"  placeholder="titre du slide">
+                                <input type="text"  id="title" required name="titre" class="form-control"  placeholder="titre du slide">
                             </div>
                         </div>
                         </div>
@@ -161,7 +173,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="field-2" class="control-label">Pièce jointe</label>
-                                    <input id="piece" name="piece" type="file" multiple class="file-loading">
+                                    <input id="piece" name="img" type="file" multiple class="file-loading">
                                 </div>
                             </div>
                         </div>
@@ -188,7 +200,7 @@
         $('#remove_one').click(function(){
 
             var id=$(this).data("id");
-            var url = "{{ path('delete_new',{'id':'__id__'}) }}";
+            var url = "{{ path('delete_slide',{'id':'__id__'}) }}";
             url = url.replace('__id__', id);
             $('#action-delete').attr("href",url);
 

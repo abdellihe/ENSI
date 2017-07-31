@@ -61,31 +61,19 @@ class ContenuWebController extends Controller
 
     }
 
-    /**
-     * @Route("/slider_ensi", name="get_json_slider_ensi")
-     */
-    public function getsliderAction()
-    {
-        $em=$this->getDoctrine()->getManager();
-        $req="SELECT * FROM slide";
-        $stmt = $em->getConnection()
-            ->prepare($req);
-        $stmt->execute();
-        $res=$stmt->fetchAll();
-        $response = new JsonResponse();
-        $response->setData($res);
-        return $response;
-
-    }
-
 
     /**
      * @Route("/slider", name="slider_ensi")
      */
     public function sliderAction()
     {
-
-        return $this->render('/dashboard/slider/slider.html.twig');
+        $em=$this->getDoctrine()->getManager();
+        $req="SELECT * FROM slide";
+        $stmt = $em->getConnection()
+            ->prepare($req);
+        $stmt->execute();
+        $slide=$stmt->fetchAll();
+        return $this->render('/dashboard/slider/slider.html.twig',array('slide'=>$slide));
 
     }
 
@@ -104,11 +92,10 @@ class ContenuWebController extends Controller
          $appPath = $this->container->getParameter('kernel.root_dir');
          $path=realpath($appPath . '/../web/assets/siteWeb/img/slider');
          $path_img =$path.'\\'.$name_file;
-
          $slider=new Slide();
          $slider->setTitre($titre);
          $slider->setDateCreate($now);
-         $slider->setPath($path_img);
+         $slider->setPath($name_file);
          $em->persist($slider);
          $em->flush();
         //copy file in slider
@@ -116,9 +103,36 @@ class ContenuWebController extends Controller
           $file->move($path, $name_file); // move the file to a path
         }
 
-
-        return $this->render('/dashboard/slider/slider.html.twig');
+   return $this->redirectToRoute('slider_ensi');
     }
+    
+    /**
+     * @Route("/deleteslider/{id}", name="delete_slide")
+     */
+    public function deletesliderAction($id)
+    {
+        
+         $em=$this->getDoctrine()->getManager();
+        //delete file from directory
+        //build path
+        //get name file
+        $req="SELECT path_img FROM slide WHERE id=$id ";
+        $stmt1=$em->getConnection()->prepare($req);
+        $stmt1->execute();
+        $res=$stmt1->fetch();
+        $appPath = $this->container->getParameter('kernel.root_dir');
+        $path=realpath($appPath . '/../web/assets/siteWeb/img/slider');
+        $path_file =$path.'\\'.$res['path_img'];
+        unlink($path_file);
+
+        $stmt = $em->getConnection()
+            ->prepare("DELETE  FROM slide WHERE id=$id ");
+        $stmt->execute();
+
+        return $this->redirectToRoute('slider_ensi');
+        
+    }
+    
 
     /**
      * @Route("/actus", name="actualites_ensi")
@@ -145,12 +159,6 @@ class ContenuWebController extends Controller
             ->prepare($req);
         $stmt->execute();
         $res=$stmt->fetchAll();
-
-
-
-
-
-
 
 
         return $this->render('/dashboard/actualites/actualites.html.twig',array('anneeuniversitaire'=>$anneuniversitaire,'new'=>$res));
