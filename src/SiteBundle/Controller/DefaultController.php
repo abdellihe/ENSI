@@ -21,9 +21,16 @@ class DefaultController extends Controller
             ->prepare($req);
         $stmt->execute();
         $res=$stmt->fetchAll();
-
+        //all sldies 
+        $em=$this->getDoctrine()->getManager();
+        $sql="SELECT * FROM slide ORDER BY date_create DESC";
+        $stmt1 = $em->getConnection()
+            ->prepare($sql);
+        $stmt1->execute();
+        $slide=$stmt1->fetchAll();
+ 
         // replace this example code with whatever you need
-        return $this->render('siteWeb/ensi-uma/siteweb.html.twig',array('new'=>$res));
+        return $this->render('siteWeb/ensi-uma/siteweb.html.twig',array('new'=>$res,'slide'=>$slide));
     }
 
     /**
